@@ -1,6 +1,6 @@
 # Ghostbuster.email Documentation
 
-You can find the online version of the ghostbuster.email documentation at [https://ghostbuster.email/docs]([https://laravel.com/docs](https://ghostbuster.email/docs)
+You can find the online version of the ghostbuster.email documentation at [https://ghostbuster.email/docs](https://ghostbuster.email/docs)
 
 ## Contribution Guidelines
 
