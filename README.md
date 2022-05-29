@@ -1,0 +1,2 @@
+# docs
+The Ghostbuster documentation.
