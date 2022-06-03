@@ -17,7 +17,7 @@ In cURL, it looks like this:
         -H 'Content-Type: application/json' \
         -H 'User-Agent: MyApp (yourname@example.com)' \
         -d '{ "email": "example@ghostbuster.email" }' \
-        https://1.ghostbusterapi.com/999999999/verify.json
+        https://1.ghostbusterapi.com/$ACCOUNT_ID/verify.json
 
 Throughout the Ghostbuster API docs, we include "Copy as cURL" examples. To try the examples in your shell, copy your Access Token into your clipboard and run:
 
