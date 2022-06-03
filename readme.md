@@ -7,9 +7,17 @@ Welcome to the Ghostbuster API! If you're looking to integrate your application 
 
 All URLs start with `https://1.ghostbusterapi.com/999999999/`. URLs are HTTPS only. The path is prefixed with the account ID.
 
-To make a request for verify an email, append the `verify` index path to the base URL to form something like `https://1.ghostbusterapi.com/999999999/verify.json`. In cURL, it looks like this:
+To make a request for verify an email address, append the `verify` index path to the base URL to form something like `https://1.ghostbusterapi.com/999999999/verify.json`. 
 
-    curl -H "Authorization: Bearer $ACCESS_TOKEN" -H 'User-Agent: MyApp (yourname@example.com)' https://1.ghostbusterapi.com/999999999/verify.json
+Also, you have to include the `Content-Type` header and the JSON data:
+
+In cURL, it looks like this:
+
+    curl -H "Authorization: Bearer $ACCESS_TOKEN" \
+        -H 'Content-Type: application/json' \
+        -H 'User-Agent: MyApp (yourname@example.com)' \
+        -d '{ "email": "example@ghostbuster.email" }' \
+        https://1.ghostbusterapi.com/999999999/verify.json
 
 Throughout the Ghostbuster API docs, we include "Copy as cURL" examples. To try the examples in your shell, copy your Access Token into your clipboard and run:
 
