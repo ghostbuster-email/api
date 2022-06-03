@@ -5,7 +5,7 @@ Welcome to the Ghostbuster API! If you're looking to integrate your application 
 
 ## Making a request
 
-All URLs start with `https://1.ghostbusterapi.com/999999999/`. URLs are HTTPS only. The path is prefixed with the account ID, but no `/api/v1` API prefix.
+All URLs start with `https://1.ghostbusterapi.com/999999999/`. URLs are HTTPS only. The path is prefixed with the account ID.
 
 To make a request for verify an email, append the `verify` index path to the base URL to form something like `https://1.ghostbusterapi.com/999999999/verify.json`. In cURL, it looks like this:
 
