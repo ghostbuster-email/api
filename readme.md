@@ -63,7 +63,7 @@ We use JSON for all API data. The style is no root element and snake_case for ob
 
 ## Using HTTP caching
 
-You must use HTTP freshness headers to speed up your application and lighten the load on our servers. API responses will include `Last-Modified` header. When you first request a verification, store these values. On subsequent requests, submit the mail address back to us as `If-Modified-Since`. If `2 hours` have not elapsed since the first request, you will get a `304 Not Modified` response with no body, saving your money, your time and bandwidth of sending something that you already have and probably hasn't changed.
+You must use HTTP freshness headers to speed up your application and lighten the load on our servers. API responses will include `Last-Modified` header. When you first request a verification, store these values. On subsequent requests, submit the mail address back to us as `If-Modified-Since`. If **2 hours** have not elapsed since the first request, you will get a `304 Not Modified` response with no body, saving your money, your time and bandwidth of sending something that you already have and probably hasn't changed.
 
 
 ## Handling errors
