@@ -13,24 +13,30 @@ Also, you have to include the `Content-Type` header and the JSON data:
 
 In cURL, it looks like this:
 
-    curl -H "Authorization: Bearer $ACCESS_TOKEN" \
-        -H 'Content-Type: application/json' \
-        -H 'User-Agent: MyApp (yourname@example.com)' \
-        -d '{ "email": "example@ghostbuster.email" }' \
-        https://1.ghostbusterapi.com/$ACCOUNT_ID/verify.json
+```bash
+curl -H "Authorization: Bearer $ACCESS_TOKEN" \
+    -H 'Content-Type: application/json' \
+    -H 'User-Agent: MyApp (yourname@example.com)' \
+    -d '{ "email": "example@ghostbuster.email" }' \
+    https://1.ghostbusterapi.com/$ACCOUNT_ID/verify.json
+```
 
 Throughout the Ghostbuster API docs, we include "Copy as cURL" examples. To try the examples in your shell, copy your Access Token into your clipboard and run:
 
-    export ACCESS_TOKEN=PASTE_ACCESS_TOKEN_HERE
-    export ACCOUNT_ID=999999999
+```bash
+export ACCESS_TOKEN=PASTE_ACCESS_TOKEN_HERE
+export ACCOUNT_ID=999999999
+```
 
 Then you should be able to copy/paste any example from the docs. After pasting a cURL example, you can pipe it to a JSON pretty printer to make it more readable. Try jsonpp or [json_pp](https://jmhodges.github.io/jsonpp/) on OSX:
 
-    curl -H "Authorization: Bearer $ACCESS_TOKEN" \
-        -H 'Content-Type: application/json' \
-        -H 'User-Agent: MyApp (yourname@example.com)' \
-        -d '{ "email": "example@ghostbuster.email" }' \
-        https://1.ghostbusterapi.com/$ACCOUNT_ID/verify.json | json_pp
+```bash
+curl -H "Authorization: Bearer $ACCESS_TOKEN" \
+    -H 'Content-Type: application/json' \
+    -H 'User-Agent: MyApp (yourname@example.com)' \
+    -d '{ "email": "example@ghostbuster.email" }' \
+    https://1.ghostbusterapi.com/$ACCOUNT_ID/verify.json | json_pp
+```
 
 ## Authentication
 
