@@ -44,3 +44,35 @@ We use this information to get in touch if you're doing something wrong (so we c
 If you don't include a `User-Agent` header, you'll get a `400 Bad Request` response.
 
 
+## JSON only
+
+We use JSON for all API data. The style is no root element and snake_case for object keys. All API URLs end in `.json` to indicate that they return JSON. Alternatively you can send `Accept: application/json`.
+
+
+## Handling errors
+
+API clients must expect and gracefully handle transient errors, such as rate limiting or server errors. We recommend baking 5xx and 429 response handling into your low-level HTTP client so your integration can handle most errors automatically.
+
+### Rate limiting (429 Too Many Requests)
+
+You can perform up to 50 requests per 10-second period from the same IP address. If you exceed this limit, you'll get a [429 Too Many Requests](http://tools.ietf.org/html/draft-nottingham-http-new-status-02#section-4) response for subsequent requests. Check the `Retry-After` header to see how many seconds to wait before retrying the request.
+
+### [5xx server errors](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#5xx_Server_errors)
+
+If Ghostbuster is having trouble, you will get a response with a 5xx status code indicating a server error. 500 (Internal Server Error), 502 (Bad Gateway), 503 (Service Unavailable), and 504 (Gateway Timeout) may be retried with [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff).
+
+
+## Conduct
+
+Please note that this project is released with a Contributor Code of Conduct. By participating in discussions about the Ghostbuster API, you agree to abide by these terms.
+
+
+## License
+
+These API docs are licensed under Creative Commons (CC BY-SA 4.0). Please share, remix, and distribute as you see fit.
+
+---
+
+If you have a specific feature request or find a bug, [please open a GitHub issue](https://github.com/ghostbuster/api/issues/new). We encourage you to fork these docs for local reference and happily accept pull requests with improvements.
+
+To talk with us and other developers about the API, [post a question on StackOverflow](http://stackoverflow.com/questions/ask) tagged `ghostbuster_email`. If you need help from us directly, [please open a support ticket](https://ghostbuster.email/support).
