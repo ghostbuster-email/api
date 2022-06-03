@@ -26,7 +26,11 @@ Throughout the Ghostbuster API docs, we include "Copy as cURL" examples. To try 
 
 Then you should be able to copy/paste any example from the docs. After pasting a cURL example, you can pipe it to a JSON pretty printer to make it more readable. Try jsonpp or [json_pp](https://jmhodges.github.io/jsonpp/) on OSX:
 
-    curl -s -H "Authorization: Bearer $ACCESS_TOKEN" https://1.ghostbusterapi.com/999999999/verify.json | json_pp
+    curl -H "Authorization: Bearer $ACCESS_TOKEN" \
+        -H 'Content-Type: application/json' \
+        -H 'User-Agent: MyApp (yourname@example.com)' \
+        -d '{ "email": "example@ghostbuster.email" }' \
+        https://1.ghostbusterapi.com/$ACCOUNT_ID/verify.json | json_pp
 
 ## Authentication
 
