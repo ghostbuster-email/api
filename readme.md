@@ -61,6 +61,11 @@ You can perform up to 50 requests per 10-second period from the same IP address.
 
 If Ghostbuster is having trouble, you will get a response with a 5xx status code indicating a server error. 500 (Internal Server Error), 502 (Bad Gateway), 503 (Service Unavailable), and 504 (Gateway Timeout) may be retried with [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff).
 
+## API endpoints
+
+* [Single Verification](https://github.com/ghostbuster-email/docs/blob/main/single-verification.md)
+* [Bulk Verification](https://github.com/ghostbuster-email/docs/blob/main/bulk-verification.md)
+
 
 ## Conduct
 
