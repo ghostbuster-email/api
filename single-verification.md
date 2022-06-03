@@ -4,13 +4,14 @@
 
 `POST /verify.json` will return the result of the verification of the submitted email address.
 
-**Required parameters**: `address` a the plain text body.
+**Required parameters**: 
+* `address` a the plain text body.
 
 This endpoint will return `200 OK` with the verification JSON representation if the verification was a success.
 
 
 ###### Example JSON Response
-
+    
     {
         "address": "nonexistentemail@example.com",
         "account": "nonexistentemail",
