@@ -74,10 +74,33 @@ curl -H "Authorization: Bearer $ACCESS_TOKEN" \
 | failed_syntax_check | undeliverable | Emails that fail RFC syntax protocols. |
 | no_dns_entries | undeliverable |  These emails are valid in syntax, but the domain doesn't have any records in DNS or have incomplete DNS Records. Therefore, mail programs will be unable to or have difficulty sending to them. These emails are marked invalid.
 | no_mx | undeliverable | The recipient domain does not have a valid MX host. |
-| mail_server_temporary_error | undeliverable | These emails belong to a mail server that is returning a temporary error. Most of the time, these emails will end up being invalid.
-| smtp_connection_error | undeliverable | These emails belong to a mail server that won't allow an SMTP connection. Most of the time, these emails will end up being invalid. |
 | mailbox_not_found | undeliverable | The mailbox is undeliverable or does not exist. |
 | mailbox_quota_exceeded | undeliverable | These emails exceeded their space quota and are not accepting emails. These emails are marked invalid. |
+| mail_server_temporary_error | unknown | These emails belong to a mail server that is returning a temporary error. Most of the time, these emails will end up being invalid.|
+| smtp_connection_error | unknown | These emails belong to a mail server that won't allow an SMTP connection. Most of the time, these emails will end up being invalid. |
+| timeout_exceeded | unknown | These emails belong to a mail server that is responding extremely slow. Most of the time, these emails will end up being invalid.|
+| exception_occurred | unknown | These emails caused an exception when validating. If this happens repeatedly, [please let us know](https://ghostbuster.email/support).
 
 
 
+## Sandbox Mode
+
+To help you test every scenario of results and reasons code with the API, we put together a list of emails that will return specific results when used with the API for testing purposes. **Testing with these emails will not be charged on your invoice.**
+
+You will need to [authenticate](https://github.com/ghostbuster-email/api#authentication) with your ACCESS TOKEN in order to test with these email addresses.
+
+- valid@example.com
+- disposable@example.com
+- undeliverable@example.com
+- do_not_send@example.com
+- unknown@example.com
+- catch_all@example.com
+- does_not_accept_mail@example.com
+- failed_smtp_connection@example.com
+- failed_syntax_check@example.com
+- mail_server_temporary_error@example.com
+- mailbox_quota_exceeded@example.com
+- mailbox_not_found@example.com
+- no_dns_entries@example.com
+- role_based@example.com
+- timeout_exceeded@example.com
