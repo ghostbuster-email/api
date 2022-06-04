@@ -4,12 +4,12 @@
 
 `POST /verify.json` will return the result of the verification of the submitted email address.
 
-**Required parameters**: 
+## Required parameters
 * `address` a the plain text body.
 
 This endpoint will return `200 OK` with the verification JSON representation if the verification was a success.
 
-##### Copy as cURL
+## Copy as cURL
 
 ```bash
 curl -H "Authorization: Bearer $ACCESS_TOKEN" \
@@ -19,7 +19,7 @@ curl -H "Authorization: Bearer $ACCESS_TOKEN" \
     https://1.ghostbusterapi.com/$ACCOUNT_ID/verify.json
 ```
 
-##### Example JSON Response
+## Example JSON Response
 
 ```jsonl
 {
@@ -35,7 +35,7 @@ curl -H "Authorization: Bearer $ACCESS_TOKEN" \
 }
 ```
 
-###### Field Explanation
+### Field Explanation
 
 | Parameter | Type | Description |
 | :--- | :---: | :--- |
@@ -52,7 +52,7 @@ curl -H "Authorization: Bearer $ACCESS_TOKEN" \
 | root_address | string | (Optional) If the address is an alias; this will contain the root email address with alias parts removed. |
 
 
-###### Result Types
+### Result Types
 
 | Reason | Description |
 | :--- | :--- |
