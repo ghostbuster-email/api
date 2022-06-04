@@ -48,7 +48,6 @@ curl -H "Authorization: Bearer $ACCESS_TOKEN" \
 | reason | array | List of potential reasons why a specific verification may be unsuccessful. |
 | result | string | Either `deliverable`, `undeliverable`, `do_not_send`, `catch_all` or `unknown`. Please see the [Result Types](#result-types) section below for details on each result type. |
 | risk | string | `high`, `medium`, `low`, or `unknown` Depending on the evaluation of all aspects of the given email. |
-| processed_at | string | The UTC time the email was validated.
 | root_address | string | (Optional) If the address is an alias; this will contain the root email address with alias parts removed. |
 
 
