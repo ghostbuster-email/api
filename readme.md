@@ -1,6 +1,6 @@
 # The Ghostbuster API
 
-Welcome to the Ghostbuster Email API! If you're looking to integrate your application with [Ghostbuster.email](https://ghostbuster.email) you're in the right place. We're happy to have you!
+Welcome to the Ghostbuster API! If you're looking to integrate your application with [Ghostbuster.email](https://ghostbuster.email) you're in the right place. We're happy to have you!
 
 ## The basic
 
@@ -12,7 +12,7 @@ You can use this API to:
 * Drop invalid email addresses from your database.
 * Suppress invalid email addresses from your sending to decrease your bounce rate.
 
-To sign up for Ghostbuster Email, you need a Ghostbuster Email account. You can try the Ghostbuster Email, but to use the full version you must have a Premium account. 
+To sign up for Ghostbuster, you need a Ghostbuster account. You can try the Ghostbuster free, but to use the full version you must have a Premium account. 
 
 
 ## Making a request
