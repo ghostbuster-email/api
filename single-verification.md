@@ -53,3 +53,11 @@ curl -H "Authorization: Bearer $ACCESS_TOKEN" \
 
 
 ###### Result Types
+
+| Reason | Description |
+| :--- | :--- |
+| deliverable | The recipient address is considered to be valid and should accept email. |
+| undeliverable | The recipient address is considered to be invalid and will result in a bounce if sent to. |
+| do_not_send | The recipient address is considered to be highly risky and will negatively impact sending reputation if sent to. |
+| catch_all | The validity of the recipient address cannot be determined as the provider accepts any and all email regardless of whether or not the recipient’s mailbox exists.
+| unknown | The validity of the recipient address cannot be determined for a variety of potential reasons. Typical cases are "Their mail server was down" or "the anti-spam system is blocking us". Remember **you are not charged for unknown results**, these requests will be deducted from your bill. If you still have a large number, contact us and we will take a look and verify.
