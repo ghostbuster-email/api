@@ -64,19 +64,21 @@ curl -H "Authorization: Bearer $ACCESS_TOKEN" \
 
 ### Reason Explanation
 
-| Reason | Description |
-| :--- | :--- |
-| no_mx | The recipient domain does not have a valid MX host. |
-| high_risk_domain | Information obtained about the domain indicates it is high risk to send email to. |
-| immature_domain | The domain is newly created based on the WHOIS information. |
-| tld_risk | The domain has a top-level-domain (TLD) that has been identified as high risk. |
-| mailbox_does_not_exist | The mailbox is undeliverable or does not exist. |
-| mailbox_is_disposable_address | The mailbox has been identified to be a disposable address. Disposable address are temporary, generally one time use, addresses. |
-| mailbox_is_role_address | The mailbox is a role based address (ex. support@…, marketing@…). |
-| catch_all | The validity of the recipient address cannot be determined as the provider accepts any and all email regardless of whether or not the recipient’s mailbox exists. |
-| long_term_disposable | The mailbox has been identified as a long term disposable address. Long term disposable addresses can be quickly and easily deactivated by users, but they will not expire without user intervention. |
-| failed_syntax_check | Emails that fail RFC syntax protocols. |
-| smtp_connection_error | These emails belong to a mail server that won't allow an SMTP connection. Most of the time, these emails will end up being invalid. |
+| Reason | Result| Description |
+| :--- | :---: | :--- |
+| immature_domain | deliverable | The domain is newly created based on the WHOIS information. |
+| catch_all | deliverable | The validity of the recipient address cannot be determined as the provider accepts any and all email regardless of whether or not the recipient’s mailbox exists. |
+| long_term_disposable | deliverable | The mailbox has been identified as a long term disposable address. Long term disposable addresses can be quickly and easily deactivated by users, but they will not expire without user intervention. |
+| high_risk_domain | do_not_send | The domain has a top-level-domain (TLD) that has been identified as high risk. |
+| mailbox_is_role_address | do_not_send | The mailbox is a role based address (ex. support@…, marketing@…). Role-based emails have a strong correlation to people reporting mails sent to them as spam and abuse.|
+| mailbox_is_disposable_address | do_not_send | The mailbox has been identified to be a disposable address. Disposable address are temporary, generally one time use, addresses. |
+| failed_syntax_check | undeliverable | Emails that fail RFC syntax protocols. |
+| no_dns_entries | undeliverable |  These emails are valid in syntax, but the domain doesn't have any records in DNS or have incomplete DNS Records. Therefore, mail programs will be unable to or have difficulty sending to them. These emails are marked invalid.
+| no_mx | undeliverable | The recipient domain does not have a valid MX host. |
+| mail_server_temporary_error | undeliverable | These emails belong to a mail server that is returning a temporary error. Most of the time, these emails will end up being invalid.
+| smtp_connection_error | undeliverable | These emails belong to a mail server that won't allow an SMTP connection. Most of the time, these emails will end up being invalid. |
+| mailbox_not_found | undeliverable | The mailbox is undeliverable or does not exist. |
+| mailbox_quota_exceeded | undeliverable | These emails exceeded their space quota and are not accepting emails. These emails are marked invalid. |
 
 
 
