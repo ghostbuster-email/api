@@ -4,7 +4,7 @@ Welcome to the Ghostbuster API! If you're looking to integrate your application 
 
 ## The basic
 
-Ghostbuster is a powerful real-time email verification service that provides you detailed information on the validity of email addresses. You can integrate this validation service into your application's signup form and customize the best use of email address validation for your use case.
+Ghostbuster is a powerful real-time email verification service that provides you detailed information on the verify of email addresses. You can integrate this verification service into your application's signup form and customize the best use of email address validation for your use case.
 
 You can use this API to:
 
