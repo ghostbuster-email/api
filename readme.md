@@ -1,11 +1,18 @@
 # The Ghostbuster API
 
-Welcome to the Ghostbuster API! If you're looking to integrate your application with [Ghostbuster.email](https://ghostbuster.email) you're in the right place. We're happy to have you!
+Welcome to the Ghostbuster Email API! If you're looking to integrate your application with [Ghostbuster.email](https://ghostbuster.email) you're in the right place. We're happy to have you!
+
+## The basic
+
+Ghostbuster is a powerful real-time email verification service that provides you detailed information on the validity of email addresses. You can integrate this validation service into your application's signup form and customize the best use of email address validation for your use case.
 
 You can use this API to:
+
 * Indicate to users that the address they have entered into a form is invalid.
 * Drop invalid email addresses from your database.
 * Suppress invalid email addresses from your sending to decrease your bounce rate.
+
+To sign up for Ghostbuster Email, you need a Ghostbuster Email account. You can try the Ghostbuster Email, but to use the full version you must have a Premium account. 
 
 
 ## Making a request
