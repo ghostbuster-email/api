@@ -2,6 +2,11 @@
 
 Welcome to the Ghostbuster API! If you're looking to integrate your application with [Ghostbuster.email](https://ghostbuster.email) you're in the right place. We're happy to have you!
 
+You can use this API to:
+* Indicate to users that the address they have entered into a form is invalid.
+* Drop invalid email addresses from your database.
+* Suppress invalid email addresses from your sending to decrease your bounce rate.
+
 
 ## Making a request
 
