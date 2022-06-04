@@ -1,13 +1,13 @@
 # Single Verification
 
-**Verify a sigle email address**
+Verify a sigle email address
+
+## Endpoint
 
 `POST /verify.json` will return the result of the verification of the submitted email address.
 
 ## Required parameters
 * `address` a the plain text body.
-
-This endpoint will return `200 OK` with the verification JSON representation if the verification was a success.
 
 ## Copy as cURL
 
@@ -19,7 +19,9 @@ curl -H "Authorization: Bearer $ACCESS_TOKEN" \
     https://1.ghostbusterapi.com/$ACCOUNT_ID/verify.json
 ```
 
-## Example JSON Response
+## Example Response
+
+This endpoint will return `200 OK` with the verification JSON representation if the verification was a success.
 
 ```jsonl
 {
